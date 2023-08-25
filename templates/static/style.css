@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    padding: 14px;
+}
+
+.navbar-nav li {
+    padding: 20px;
+}
+
+.nav-link {
+    padding: 14px ! important;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+    font-size: 500%;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 10px #000;
+}
+
+.carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000;
+    padding-bottom: 1rem;
+}
+
+.jumbotron {
+    padding: 16px;
+    border-radius: 0;
+}
+
+.padding {
+    padding-bottom: 32px;
+}
+
+.welcome {
+    width: 75%;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.textareas {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.welcome hr {
+    padding-top: 2px solid #b4b4b4;
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 32px;
+}
+
+.fa-twitter-square {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.fa-cogs {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.fa-analytics {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.fa-facebook {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.fa-linkedin-in {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.fa-instagram {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.fa-python {
+    font-size: 64px;
+    color: blue;
+    margin: 16px;
+}
+
+.gif {
+    max-width: 100%;
+}
+
+.social a {
+    font-size: 4.5rem;
+    padding: 3rem;
+
+}
+
+.social a:hover {
+    color: #d5d5d5;
+
+}
+
+.card-imd-top {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer {
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 32px;
+
+}
+
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+
+hr.light100 {
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+    .social a {
+        font-size: 4em;
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        top: 45%;
+
+    }
+
+    .carousel-caption h1 {
+        font-size: 350%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 140%;
+        font-weight: 400%;
+        text-transform: uppercase;
+        padding-bottom: .2rem;
+    }
+
+    .social a {
+        font-size: 2em;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+/*--- Fixed Background Image --*/
+figure {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin: 0 !important;
+}
+
+.fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#fixed {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-me {
+    margin-top: 100px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.about-me h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+footer {
+    padding: 50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

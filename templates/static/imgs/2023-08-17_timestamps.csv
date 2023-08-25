@@ -1,0 +1,21 @@
+frame_detected_secs,detected_flag,days,hours,minutes,seconds,formatted_time,dd_hh_mm_ss
+0 days 00:00:00,0,0,0,0,0,0 days 0 hours 0 mins 0 secs,00:00:00:00
+0 days 00:00:01,0,0,0,0,1,0 days 0 hours 0 mins 1 secs,00:00:00:01
+0 days 00:00:02,0,0,0,0,2,0 days 0 hours 0 mins 2 secs,00:00:00:02
+0 days 00:00:03,0,0,0,0,3,0 days 0 hours 0 mins 3 secs,00:00:00:03
+0 days 00:00:04,0,0,0,0,4,0 days 0 hours 0 mins 4 secs,00:00:00:04
+0 days 00:00:05,1,0,0,0,5,0 days 0 hours 0 mins 5 secs,00:00:00:05
+0 days 00:00:06,1,0,0,0,6,0 days 0 hours 0 mins 6 secs,00:00:00:06
+0 days 00:00:07,1,0,0,0,7,0 days 0 hours 0 mins 7 secs,00:00:00:07
+0 days 00:00:08,0,0,0,0,8,0 days 0 hours 0 mins 8 secs,00:00:00:08
+0 days 00:00:09,1,0,0,0,9,0 days 0 hours 0 mins 9 secs,00:00:00:09
+0 days 00:00:10,0,0,0,0,10,0 days 0 hours 0 mins 10 secs,00:00:00:10
+0 days 00:00:11,0,0,0,0,11,0 days 0 hours 0 mins 11 secs,00:00:00:11
+0 days 00:00:12,0,0,0,0,12,0 days 0 hours 0 mins 12 secs,00:00:00:12
+0 days 00:00:13,1,0,0,0,13,0 days 0 hours 0 mins 13 secs,00:00:00:13
+0 days 00:00:14,1,0,0,0,14,0 days 0 hours 0 mins 14 secs,00:00:00:14
+0 days 00:00:15,1,0,0,0,15,0 days 0 hours 0 mins 15 secs,00:00:00:15
+0 days 00:00:16,1,0,0,0,16,0 days 0 hours 0 mins 16 secs,00:00:00:16
+0 days 00:00:17,0,0,0,0,17,0 days 0 hours 0 mins 17 secs,00:00:00:17
+0 days 00:00:18,1,0,0,0,18,0 days 0 hours 0 mins 18 secs,00:00:00:18
+0 days 00:00:19,0,0,0,0,19,0 days 0 hours 0 mins 19 secs,00:00:00:19
