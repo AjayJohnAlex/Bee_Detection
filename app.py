@@ -85,6 +85,7 @@ def detect():
         total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         fps = int(cap.get(cv2.CAP_PROP_FPS))
         video_duration = int(total_frames / fps)
+        keyframe_interval = fps // 2  # Set the keyframe interval based on frame rate
 
         detection_start_time = time.time()
 
@@ -93,18 +94,20 @@ def detect():
             if not ret:
                 break
             frame_count += 1
+            # keyframe_interval logic
+            if frame_count % keyframe_interval == 0:
+                new_height, new_width = 416, 416
+                new_frame = cv2.resize(
+                    frame, dsize=(new_width, new_height), interpolation=cv2.INTER_CUBIC
+                )
 
-            new_height, new_width = 416, 416
-            new_frame = cv2.resize(
-                frame, dsize=(new_width, new_height), interpolation=cv2.INTER_CUBIC
-            )
+                detections = model(new_frame)
+                # print(f"frame_count - {frame_count}")
 
-            detections = model(new_frame)
-
-            if len(detections.pred[0]) > 0:
-                for x1, y1, x2, y2, conf, cls in detections.pred[0]:
-                    if conf > 0.3:
-                        frame_timestamp_set.add(frame_count)
+                if len(detections.pred[0]) > 0:
+                    for x1, y1, x2, y2, conf, cls in detections.pred[0]:
+                        if conf > 0.3:
+                            frame_timestamp_set.add(frame_count)
 
         cap.release()
 
@@ -181,10 +184,11 @@ def detect():
         result = {
             "success": True,
             "output": {
+                "filename": filename,
                 "csv_filename": csv_file_name,
                 "img_file_name": img_file_name,
-                "detection_duration": f"Time for detection {round(detect_time/60,2)} mins. ",
-                "api_time": f"API running time {round(api_time/60,2)} mins. ",
+                "detection_duration": f"Time for detection {round(detect_time/60,2)} mins or {detect_time} secs",
+                "api_time": f"API running time {round(api_time/60,2)} mins or {api_time} secs ",
                 "video_duration": f"Duration of video uploaded {video_duration} secs or {round(video_duration/60,2)} mins",
             },
         }
